@@ -130,9 +130,9 @@ Text Notes 7400 4500 0    50   ~ 0
 I²C 3.3V\nAnschluss
 Text Notes 4800 3250 0    50   ~ 0
 Jumper\nVUSB nach VIN
-Text Notes 1350 4700 0    50   ~ 0
-L/R\nWS\nSD
-Text Notes 1950 5150 0    50   ~ 0
+Text Notes 5150 4500 0    50   ~ 0
+1: L/R\n3: WS\n5: SD
+Text Notes 4800 5250 0    50   ~ 0
 connection of\nICS-43434\nBreak-Out Board\nPesky Products
 Text Notes 3250 4700 0    50   ~ 0
 GND\nSCK\n3V3
@@ -547,46 +547,6 @@ F 3 "~" H 9700 4500 50  0001 C CNN
 $EndComp
 Text GLabel 9350 4500 0    50   Input ~ 0
 SCL
-Text GLabel 1950 4550 0    50   Input ~ 0
-WS
-Text GLabel 1950 4650 0    50   Output ~ 0
-SD
-Text GLabel 2450 4550 2    50   Input ~ 0
-SCK
-Wire Wire Line
-	1950 4450 1600 4450
-Wire Wire Line
-	2450 4450 2800 4450
-$Comp
-L power:GND #PWR0126
-U 1 1 5D6C3101
-P 1600 4450
-F 0 "#PWR0126" H 1600 4200 50  0001 C CNN
-F 1 "GND" H 1605 4277 50  0000 C CNN
-F 2 "" H 1600 4450 50  0001 C CNN
-F 3 "" H 1600 4450 50  0001 C CNN
-	1    1600 4450
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR0127
-U 1 1 5D6C35EC
-P 2800 4450
-F 0 "#PWR0127" H 2800 4200 50  0001 C CNN
-F 1 "GND" H 2805 4277 50  0000 C CNN
-F 2 "" H 2800 4450 50  0001 C CNN
-F 3 "" H 2800 4450 50  0001 C CNN
-	1    2800 4450
-	1    0    0    -1  
-$EndComp
-Wire Wire Line
-	2450 4650 2600 4650
-Wire Wire Line
-	2600 4650 2600 4800
-Wire Wire Line
-	2600 4800 3050 4800
-Wire Wire Line
-	3050 4800 3050 4650
 $Comp
 L power:+3.3VP #PWR0128
 U 1 1 5D6C96AA
@@ -744,17 +704,6 @@ Wire Wire Line
 Wire Wire Line
 	10000 2700 9700 2700
 $Comp
-L Connector_Generic:Conn_02x03_Odd_Even J1
-U 1 1 5E455872
-P 2150 4550
-F 0 "J1" H 2200 4867 50  0000 C CNN
-F 1 "Conn_02x03_Odd_Even" H 2200 4776 50  0000 C CNN
-F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" H 2150 4550 50  0001 C CNN
-F 3 "~" H 2150 4550 50  0001 C CNN
-	1    2150 4550
-	1    0    0    -1  
-$EndComp
-$Comp
 L Device:C C4
 U 1 1 5E4DAB70
 P 1150 6050
@@ -832,8 +781,7 @@ F 3 "~" H 3050 5050 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3050 4900 3050 4800
-Connection ~ 3050 4800
+	3050 4900 3050 4850
 Wire Wire Line
 	3050 5200 3050 5300
 $Comp
@@ -887,4 +835,56 @@ F 3 "" H 4150 5900 50  0001 C CNN
 	1    4150 5900
 	1    0    0    -1  
 $EndComp
+$Comp
+L Connector_Generic:Conn_01x06 J1
+U 1 1 5E508C40
+P 4850 4550
+F 0 "J1" H 4930 4542 50  0000 L CNN
+F 1 "Conn_01x06" H 4930 4451 50  0000 L CNN
+F 2 "Connector_Molex:Molex_Pico-Lock_504050-0591_1x05-1MP_P1.50mm_Horizontal" H 4850 4550 50  0001 C CNN
+F 3 "~" H 4850 4550 50  0001 C CNN
+	1    4850 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 4350 3850 4350
+Wire Wire Line
+	4650 4450 3850 4450
+Wire Wire Line
+	3850 4350 3850 4400
+Wire Wire Line
+	3850 4400 3600 4400
+Wire Wire Line
+	3600 4400 3600 4550
+Connection ~ 3850 4400
+Wire Wire Line
+	3850 4400 3850 4450
+$Comp
+L power:GND #PWR0126
+U 1 1 5E512A7D
+P 3600 4550
+F 0 "#PWR0126" H 3600 4300 50  0001 C CNN
+F 1 "GND" H 3605 4377 50  0000 C CNN
+F 2 "" H 3600 4550 50  0001 C CNN
+F 3 "" H 3600 4550 50  0001 C CNN
+	1    3600 4550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3050 4850 4650 4850
+Connection ~ 3050 4850
+Wire Wire Line
+	4650 4550 4150 4550
+Wire Wire Line
+	4650 4650 4150 4650
+Wire Wire Line
+	4650 4750 4150 4750
+Text GLabel 4150 4550 0    50   Input ~ 0
+WS
+Text GLabel 4150 4650 0    50   Input ~ 0
+SCK
+Text GLabel 4150 4750 0    50   Output ~ 0
+SD
+Wire Wire Line
+	3050 4650 3050 4850
 $EndSCHEMATC

@@ -1,4 +1,4 @@
-16615693923171338
+16617276485959338
 Battery
 BatteryHolder_Bulgin_BX0036_1xC
 Bulgin Battery Holder, BX0036, Battery Type C (https://www.bulgin.com/products/pub/media/bulgin/data/Battery_holders.pdf)
@@ -19011,6 +19011,13 @@ connector Molex SlimStack side entry
 0
 80
 80
+Connector_Molex
+molex_pico-ezmate_781715006_1x06_P1.20mm_Horizontal
+
+
+0
+8
+6
 Connector_Multicomp
 Multicomp_MC9A12-1034_2x05_P2.54mm_Vertical
 http://www.farnell.com/datasheets/1520732.pdf
